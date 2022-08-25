@@ -1,0 +1,36 @@
+app:
+  version : '@project.version@'
+
+server:
+  port: 8080
+
+  servlet:
+    context-path: /dibakar
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dibakr_class?autoReconnect=true
+    username: root
+    password: root
+#
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+  thymeleaf:
+    mode: LEGACYHTML5
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: validate
+#      ddl-auto: create
+      generate-ddl: true
+
+timeZone: "Asia/Kolkata"
+
+configKeys:
+  versionKey: 'MINIMUM_REQUIRED_VERSION'
+
+
+
+
